@@ -14,6 +14,7 @@
 	--card-bg: #ffffff;
 
 	--font-primary: "Poppins";
+	--main-min-height: 760px;
 }
 
 :root[data-theme="dark"] {
@@ -25,14 +26,128 @@
 	--card-bg: #1e1e1e;
 }
 
-/* nav */
 body {
 	font-family: var(--font-primary);
 	font-weight: 300;
+	color: var(--color-primary);
+
+	/* fallback for browser that dont support dvh(dynamic vh) */
+	min-height: 100vh;
+	min-height: 100dvh;
+
+	position: relative;
+	background-color: var(--main-bg);
 }
 
-.tab-btn {
+/* nav */
+nav {
+	display: grid;
+	grid-template-columns: 185px 1fr 185px;
+}
+.nav-left,
+.nav-middle,
+.nav-right {
+	/* with respect to nav grid */
+	place-self: center;
+
+	/* items within */
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+nav {
+	padding: 1.6rem 2rem 1rem;
+	background-color: var(--nav-bg);
+	justify-content: space-between;
+	background: none;
+	position: relative;
+
+	/* appears above every layer */
+	z-index: 10;
+}
+
+.nav-middle {
+	/* need to use media queries to make this responsive */
+	gap: clamp(0.625rem, 2.461vw - 0.953rem, 4rem);
+}
+
+.nav-left__name {
+	font-weight: 200;
+	font-size: 2rem;
+}
+
+.tab-btn,
+.theme-btn {
 	background-color: inherit;
 	border: none;
 	color: var(--color-primary);
 }
+
+.tab-btn {
+	font-weight: 400;
+	font-size: 1.1rem;
+}
+
+/* main */
+
+.main {
+	padding: 0 1rem 2rem;
+
+	/* hero image height is around 750px */
+	min-height: var(--main-min-height);
+}
+
+/* home-tab */
+.home-tab {
+	margin-left: clamp(0.625rem, 12.5vw - 2.5rem, 12.5rem);
+}
+
+.home-tab {
+	height: var(--main-min-height);
+}
+
+.hero-vector {
+	/* body has position relative, so it will be positioned according to body element */
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	/* appears above main content but below nav */
+	z-index: 1;
+}
+
+.hero-person {
+	position: absolute;
+	right: clamp(0.625rem, 5.921vw - 0.855rem, 6.25rem);
+	z-index: 10;
+}
+
+.hero-text {
+	height: 80%;
+	display: grid;
+	align-content: center;
+	gap: 1rem;
+	max-width: 545px;
+}
+
+.hero-text > h1 {
+	color: var(--hero-text-color);
+	font-size: 4.5rem;
+	line-height: 1em;
+}
+
+.hero-text > p:nth-of-type(2) {
+	font-size: 1.2rem;
+}
+
+.home-red {
+	color: #df6951;
+	font-weight: 700;
+	font-size: 1.4rem;
+}
+
+/* for debugging */
+/* * {
+	outline: 2px solid red;
+} */
