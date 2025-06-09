@@ -14,7 +14,6 @@
 	--card-bg: #ffffff;
 
 	--font-primary: "Poppins";
-	--main-min-height: 760px;
 }
 
 :root[data-theme="dark"] {
@@ -99,18 +98,13 @@ nav {
 
 .main {
 	padding: 0 1rem 2rem;
-
-	/* hero image height is around 750px */
-	min-height: var(--main-min-height);
 }
 
 /* home-tab */
-.home-tab {
+.home-content {
 	margin-left: clamp(0.625rem, 12.5vw - 2.5rem, 12.5rem);
-}
-
-.home-tab {
-	height: var(--main-min-height);
+	/* hero image height is around 750px */
+	min-height: 760px;
 }
 
 .hero-vector {
