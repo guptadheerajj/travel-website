@@ -9,10 +9,10 @@ export default (function () {
 	const tabSwitchAudio = document.querySelector("audio.tab-switch");
 	const allTabs = {
 		home: home.createHomeTab(),
-		// destination: destination.createDestinationTab(),
-		// booking: booking.createBookingTab(),
-		// login: login.createLoginTab(),
-		// signup: signup.createSignupTab(),
+		destination: destination.createDestinationTab(),
+		booking: booking.createBookingTab(),
+		login: login.createLoginTab(),
+		signup: signup.createSignupTab(),
 	};
 
 	// i am using event delegaton here to add event listener
