@@ -1,0 +1,38 @@
+/* theme */
+
+:root {
+	--color-active: #00cccb;
+	--light-gray: #6c6c6c;
+	--hero-text-color: #181e4b;
+	--color-primary: #000000;
+
+	--button-bg: var(--color-active);
+
+	--nav-bg: #ffffff;
+	--main-bg: #f2f2f2;
+
+	--card-bg: #ffffff;
+
+	--font-primary: "Poppins";
+}
+
+:root[data-theme="dark"] {
+	/* --hero-text: i will assign later */
+	--color-primary: #ffffff;
+
+	--nav-bg: #0a0a0a;
+	--main-bg: #000000;
+	--card-bg: #1e1e1e;
+}
+
+/* nav */
+body {
+	font-family: var(--font-primary);
+	font-weight: 300;
+}
+
+.tab-btn {
+	background-color: inherit;
+	border: none;
+	color: var(--color-primary);
+}
