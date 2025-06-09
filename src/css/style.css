@@ -89,6 +89,12 @@ nav {
 	font-size: 1.1rem;
 }
 
+.active-tab {
+	margin-bottom: -2px;
+	border-bottom: 2px solid var(--color-active);
+	color: var(--color-active);
+}
+
 /* main */
 
 .main {
