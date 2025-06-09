@@ -5,6 +5,7 @@ import booking from "./bookingTab";
 import login from "./loginTab";
 import signup from "./signupTab";
 
+// Used Event Delegation to bind events to the tabs
 export default (function () {
 	const tabSwitchAudio = document.querySelector("audio.tab-switch");
 	const allTabs = {
@@ -15,10 +16,24 @@ export default (function () {
 		signup: signup.createSignupTab(),
 	};
 
-	// i am using event delegaton here to add event listener
+	function removeActiveTabClass() {
+		const activeTab = document.querySelector(".active-tab");
+		if (activeTab) {
+			activeTab.classList.remove("active-tab");
+		}
+	}
+
+	function appendTab(tabNode) {
+		const main = document.querySelector(".main");
+		main.innerHTML = "";
+		main.insertAdjacentHTML("afterbegin", DOMPurify.sanitize(tabNode));
+	}
+
+	// event delegation
 	function bindTabSwitchEvent() {
 		const nav = document.querySelector("nav");
 		nav.addEventListener("click", (event) => {
+			// get closest ancestor tab element
 			const target = event.target.closest("[data-tab]");
 			if (!target) {
 				return;
@@ -35,19 +50,6 @@ export default (function () {
 			//highlights the clicked tab
 			target.classList.add("active-tab");
 		});
-	}
-
-	function appendTab(tabNode) {
-		const main = document.querySelector(".main");
-		main.innerHTML = "";
-		main.insertAdjacentHTML("afterbegin", DOMPurify.sanitize(tabNode));
-	}
-
-	function removeActiveTabClass() {
-		const activeTab = document.querySelector(".active-tab");
-		if (activeTab) {
-			activeTab.classList.remove("active-tab");
-		}
 	}
 
 	return { bindTabSwitchEvent };

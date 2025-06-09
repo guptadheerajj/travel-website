@@ -15,15 +15,33 @@
 
 	--font-primary: "Poppins";
 	--home-min-height: 760px;
+	--hero-top-svg: #fff1da;
 }
 
-:root[data-theme="dark"] {
-	/* --hero-text: i will assign later */
+/* :root[data-theme="dark"] {
+	--hero-text-color: #c4b5fd;
 	--color-primary: #ffffff;
 
 	--nav-bg: #0a0a0a;
-	--main-bg: #000000;
-	--card-bg: #1e1e1e;
+	--main-bg: #1e1e1e;
+	--hero-top-svg: var(--light-gray);
+} */
+
+:root[data-theme="dark"] {
+	--color-active: #00fff7; /* More neon/tropical cyan for a travel vibe */
+	--light-gray: #bcbcbc; /* Softer gray for readability */
+	--hero-text-color: #ffffff; /* White for main headings */
+	--color-primary: #eaeaea; /* Off-white for body text */
+
+	--button-bg: var(--color-active); /* Retain active contrast for buttons */
+
+	--nav-bg: #121212; /* Darker navbar */
+	--main-bg: #0f0f0f; /* Very deep dark background */
+	--card-bg: #1a1a1a; /* Slightly elevated card background */
+
+	--font-primary: "Poppins", sans-serif;
+	--home-min-height: 760px;
+	--hero-top-svg: #1e1e1e; /* Match hero SVG wave to dark backdrop */
 }
 
 body {
@@ -119,6 +137,9 @@ nav {
 
 	/* appears above main content but below nav */
 	z-index: 1;
+}
+.hero-vector path {
+	fill: var(--hero-top-svg);
 }
 
 .hero-person {
