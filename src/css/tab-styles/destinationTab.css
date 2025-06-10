@@ -1,0 +1,132 @@
+.destination {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	margin: 1rem 2rem;
+	/* to stimulate sidebar for consistency */
+	min-height: 95vh;
+}
+
+.destination-hero {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	height: auto;
+	z-index: -1;
+	object-fit: cover;
+}
+
+.destination > .destination__head {
+	text-align: center;
+	font-size: clamp(1.5rem, 2.237vw + 0.441rem, 3.125rem);
+	font-weight: 700;
+
+	background: linear-gradient(
+		90deg,
+		#00e6b9 0%,
+		#00e6b9 25%,
+		#ffdf34 35%,
+		#ffdf34 45%,
+		#746ed0 55%,
+		#746ed0 100%
+	);
+
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+
+/* card */
+.card-container {
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(auto-fit, 310px);
+	justify-content: center;
+	gap: 6rem;
+}
+
+.card {
+	width: 306px;
+	border-radius: 12px;
+	padding: 0.7rem;
+	background-color: var(--card-bg);
+	position: relative;
+	margin: 8px;
+	cursor: pointer;
+}
+
+.card:hover {
+	background-color: var(--card-bg-hover);
+	transform: scale(1.05) rotate(2deg);
+	transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card-container > .card:nth-child(2n):hover {
+	transform: scale(1.05) rotate(-2deg);
+}
+
+.card__img {
+	border-radius: 12px;
+	overflow: hidden;
+	height: 212px;
+}
+
+.card__img > img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.card,
+.card-text {
+	display: grid;
+	gap: 0.4rem;
+}
+
+.card-text {
+	margin: 0.4rem 0;
+}
+
+.card__discount {
+	position: absolute;
+	right: 20px;
+	top: -6px;
+}
+
+.card__title,
+.card__price {
+	font-weight: 600;
+	font-size: 1.1rem;
+}
+
+.card__description {
+	font-weight: 300;
+	font-size: 1rem;
+}
+
+.card-bottom span {
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.card-bottom,
+.card-bottom > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.card__price > span {
+	text-decoration: line-through;
+	font-weight: 100;
+	text-decoration-thickness: 1px;
+}
+
+.card-user > svg {
+	fill: var(--user-click-fill);
+}
+
+/* color: var(--card-color-title); */

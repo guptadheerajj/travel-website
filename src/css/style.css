@@ -9,11 +9,17 @@
 
 	--nav-bg: #ffffff;
 	--main-bg: #f2f2f2;
-	--card-bg: #ffffff;
 
 	--font-primary: "Poppins";
 	--home-min-height: 760px;
 	--hero-top-svg: #fff1da;
+
+	/* card */
+	--card-bg: rgba(255, 255, 255, 0.7);
+	--card-bg-hover: rgba(255, 255, 255);
+	--card-color-title: #000000;
+	--card-color-description: #6c6c6c;
+	--user-click-fill: #292d32;
 }
 
 :root[data-theme="dark"] {
@@ -26,11 +32,17 @@
 
 	--nav-bg: #121212;
 	--main-bg: #0f0f0f;
-	--card-bg: #1a1a1a;
 
 	--font-primary: "Poppins", sans-serif;
 	--home-min-height: 760px;
 	--hero-top-svg: #1e1e1e;
+
+	/* card */
+	--card-bg: rgba(30, 30, 30, 0.7);
+	--card-bg-hover: rgba(30, 30, 30);
+	--card-color-title: #ffffff;
+	--card-color-description: #dadada;
+	--user-click-fill: #dadada;
 }
 
 body {
@@ -86,6 +98,7 @@ nav {
 .theme-btn {
 	background-color: inherit;
 	border: none;
+	cursor: pointer;
 }
 
 .tab-btn {

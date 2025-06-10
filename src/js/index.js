@@ -2,8 +2,8 @@
 import "../css/normalize.css";
 import "../css/style.css";
 import "../css/fonts.css";
-
 import "../css/tab-styles/homeTab.css";
+import "../css/tab-styles/destinationTab.css";
 
 import tabSwitch from "./tabSwitch.js";
 import themeManager from "./themeManager.js";
