@@ -1,6 +1,10 @@
+// import css files
 import "../css/normalize.css";
 import "../css/style.css";
 import "../css/fonts.css";
+
+import "../css/tab-styles/homeTab.css";
+
 import tabSwitch from "./tabSwitch.js";
 import themeManager from "./themeManager.js";
 
@@ -13,6 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// tab switch
 	tabSwitch.bindTabSwitchEvent();
+
+	// render home tab
 	const homeTabBtn = document.querySelector('[data-tab = "home"]');
 	homeTabBtn.click();
 });

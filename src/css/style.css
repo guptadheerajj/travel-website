@@ -1,16 +1,14 @@
 /* theme */
-
 :root {
 	--color-active: #00cccb;
 	--light-gray: #6c6c6c;
-	--hero-text-color: #181e4b;
+	--bold-text-color: #181e4b;
 	--color-primary: #000000;
 
 	--button-bg: var(--color-active);
 
 	--nav-bg: #ffffff;
 	--main-bg: #f2f2f2;
-
 	--card-bg: #ffffff;
 
 	--font-primary: "Poppins";
@@ -18,30 +16,21 @@
 	--hero-top-svg: #fff1da;
 }
 
-/* :root[data-theme="dark"] {
-	--hero-text-color: #c4b5fd;
-	--color-primary: #ffffff;
-
-	--nav-bg: #0a0a0a;
-	--main-bg: #1e1e1e;
-	--hero-top-svg: var(--light-gray);
-} */
-
 :root[data-theme="dark"] {
-	--color-active: #00fff7; /* More neon/tropical cyan for a travel vibe */
-	--light-gray: #bcbcbc; /* Softer gray for readability */
-	--hero-text-color: #ffffff; /* White for main headings */
-	--color-primary: #eaeaea; /* Off-white for body text */
+	--color-active: #00fff7;
+	--light-gray: #bcbcbc;
+	--bold-text-color: #ffffff;
+	--color-primary: #eaeaea;
 
-	--button-bg: var(--color-active); /* Retain active contrast for buttons */
+	--button-bg: var(--color-active);
 
-	--nav-bg: #121212; /* Darker navbar */
-	--main-bg: #0f0f0f; /* Very deep dark background */
-	--card-bg: #1a1a1a; /* Slightly elevated card background */
+	--nav-bg: #121212;
+	--main-bg: #0f0f0f;
+	--card-bg: #1a1a1a;
 
 	--font-primary: "Poppins", sans-serif;
 	--home-min-height: 760px;
-	--hero-top-svg: #1e1e1e; /* Match hero SVG wave to dark backdrop */
+	--hero-top-svg: #1e1e1e;
 }
 
 body {
@@ -61,20 +50,6 @@ body {
 nav {
 	display: grid;
 	grid-template-columns: 185px 1fr 185px;
-}
-.nav-left,
-.nav-middle,
-.nav-right {
-	/* with respect to nav grid */
-	place-self: center;
-
-	/* items within */
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-}
-
-nav {
 	padding: 1.6rem 2rem 1rem;
 	background-color: var(--nav-bg);
 	justify-content: space-between;
@@ -83,6 +58,18 @@ nav {
 
 	/* appears above every layer */
 	z-index: 10;
+}
+
+.nav-left,
+.nav-middle,
+.nav-right {
+	/* with respect to nav grid */
+	place-self: center;
+
+	/* items within nav */
+	display: flex;
+	align-items: center;
+	gap: 1rem;
 }
 
 .nav-middle {
@@ -99,14 +86,19 @@ nav {
 .theme-btn {
 	background-color: inherit;
 	border: none;
-	color: var(--color-primary);
 }
 
 .tab-btn {
+	color: var(--color-primary);
 	font-weight: 400;
 	font-size: 1.1rem;
 }
 
+.tab-btn:hover {
+	color: var(--color-active);
+}
+
+/* this class is added via javascript to tabs that is currently active */
 .active-tab {
 	margin-bottom: -2px;
 	border-bottom: 2px solid var(--color-active);
@@ -114,65 +106,9 @@ nav {
 }
 
 /* main */
-
 .main {
 	padding: 0 1rem 2rem;
 }
-
-.home {
-	min-height: var(--home-min-height);
-}
-
-/* home-tab */
-.home-content {
-	margin-left: clamp(0.625rem, 12.5vw - 2.5rem, 12.5rem);
-	height: var(--home-min-height);
-}
-
-.hero-vector {
-	/* body has position relative, so it will be positioned according to body element */
-	position: absolute;
-	top: 0;
-	right: 0;
-
-	/* appears above main content but below nav */
-	z-index: 1;
-}
-.hero-vector path {
-	fill: var(--hero-top-svg);
-}
-
-.hero-person {
-	position: absolute;
-	right: clamp(0.625rem, 5.921vw - 0.855rem, 6.25rem);
-	z-index: 10;
-}
-
-.hero-text {
-	height: 80%;
-	display: grid;
-	align-content: center;
-	gap: 1rem;
-	max-width: 545px;
-}
-
-.hero-text > h1 {
-	color: var(--hero-text-color);
-	font-size: 4.5rem;
-	line-height: 1em;
-}
-
-.hero-text > p:nth-of-type(2) {
-	font-size: 1.2rem;
-}
-
-.home-red {
-	color: #df6951;
-	font-weight: 700;
-	font-size: 1.4rem;
-}
-
-/* destination tab */
 
 /* for debugging */
 /* * {

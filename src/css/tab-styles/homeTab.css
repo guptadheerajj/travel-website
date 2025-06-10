@@ -1,0 +1,54 @@
+/* home-tab */
+.home {
+	display: flex;
+}
+
+.hero-vector {
+	/* body has position relative, so it will be positioned according to body element */
+	position: absolute;
+	top: 0;
+	right: 0;
+	/* appears above main content but below nav */
+	z-index: 1;
+}
+
+/* change svg color depending on theme */
+.hero-vector path {
+	fill: var(--hero-top-svg);
+}
+
+.home-content {
+	margin-left: clamp(0.625rem, 12.5vw - 2.5rem, 12.5rem);
+	height: var(--home-min-height);
+}
+
+.hero-person,
+.home-content {
+	position: relative;
+	/* appears above svg*/
+	z-index: 2;
+}
+
+.hero-text {
+	min-height: 80%;
+	display: grid;
+	place-content: center;
+	gap: 1.1rem;
+	max-width: 545px;
+}
+
+.hero-text > h1 {
+	color: var(--bold-text-color);
+	font-size: 4.5rem;
+	line-height: 1em;
+}
+
+.hero-text > p:nth-of-type(2) {
+	font-size: 1.2rem;
+}
+
+.home-red {
+	color: #df6951;
+	font-weight: 700;
+	font-size: 1.4rem;
+}
