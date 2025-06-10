@@ -1,5 +1,4 @@
-import heroBackSvg from "../assets/icons/hero-back.svg";
-import heroPersonPng from "../assets/icons/hero-person.png";
+import heroPersonPng from "../../assets/icons/hero-person.png";
 
 export default (function () {
 	function createHomeTab() {

@@ -1,9 +1,9 @@
 import DOMPurify from "dompurify";
-import home from "./homeTab";
-import destination from "./destinationTab";
-import booking from "./bookingTab";
-import login from "./loginTab";
-import signup from "./signupTab";
+import home from "./tabComponents/homeTab";
+import destination from "./tabComponents/destinationTab";
+import booking from "./tabComponents/bookingTab";
+import login from "./tabComponents/loginTab";
+import signup from "./tabComponents/signupTab";
 
 // Used Event Delegation to bind events to the tabs
 export default (function () {
