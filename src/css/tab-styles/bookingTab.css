@@ -1,0 +1,52 @@
+.booking {
+	min-height: 85vh;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	text-align: center;
+	justify-content: center;
+	align-content: start;
+	padding-top: 2rem;
+}
+
+.booking__head {
+	font-size: clamp(1.5rem, 2.237vw + 0.441rem, 3.125rem);
+	font-weight: 700;
+
+	background: linear-gradient(
+		90deg,
+		#00e6b9 0%,
+		#00e6b9 25%,
+		#ffdf34 35%,
+		#ffdf34 45%,
+		#746ed0 55%,
+		#746ed0 100%
+	);
+
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+
+.booking__steps {
+	display: flex;
+	gap: 6rem;
+	flex-wrap: wrap;
+	align-self: center;
+}
+
+.booking__steps > * {
+	max-width: 320px;
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+}
+
+.step__title {
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+.step__description {
+	font-size: 0.9rem;
+	font-weight: 300;
+}
