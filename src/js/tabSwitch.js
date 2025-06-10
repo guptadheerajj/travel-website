@@ -2,18 +2,15 @@ import DOMPurify from "dompurify";
 import home from "./tabComponents/homeTab";
 import destination from "./tabComponents/destinationTab";
 import booking from "./tabComponents/bookingTab";
-import login from "./tabComponents/loginTab";
-import signup from "./tabComponents/signupTab";
 
 // Used Event Delegation to bind events to the tabs
 export default (function () {
 	const tabSwitchAudio = document.querySelector("audio.tab-switch");
+
 	const allTabs = {
 		home: home.createHomeTab(),
 		destination: destination.createDestinationTab(),
 		booking: booking.createBookingTab(),
-		login: login.createLoginTab(),
-		signup: signup.createSignupTab(),
 	};
 
 	function removeActiveTabClass() {

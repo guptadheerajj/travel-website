@@ -99,16 +99,6 @@ export default (function () {
 			cardRating: "4.6",
 			cardUserCount: "2,891",
 		},
-		{
-			cardImg: paris,
-			cardTitle: "Paris (France)",
-			cardPrice: "950",
-			cardSpanPrice: "1,200",
-			cardDescription:
-				"The City of Light enchants with iconic landmarks like the Eiffel Tower, world-class museums, charming cafés, and romantic Seine river walks.",
-			cardRating: "4.8",
-			cardUserCount: "3,247",
-		},
 	];
 
 	function createDestinationTab() {

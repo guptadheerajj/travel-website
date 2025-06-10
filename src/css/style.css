@@ -85,7 +85,6 @@ nav {
 }
 
 .nav-middle {
-	/* need to use media queries to make this responsive */
 	gap: clamp(0.625rem, 2.461vw - 0.953rem, 4rem);
 }
 
